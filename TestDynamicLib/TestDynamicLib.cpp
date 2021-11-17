@@ -13,9 +13,10 @@
  */
 typedef void(__stdcall* f_funci)();
 
-int main()
-{
-    HINSTANCE hGetProcIDDLL = LoadLibrary("c:\\Users\\ASUS\\source\\repos\\ReleaseVersion\\DynamicLib\\lib\\DynamicLib.dll");
+int main(int argc, char* argv[])
+{   
+    /*Или абсолютный путь c:\\Users\\ASUS\\source\\repos\\ReleaseVersion\\DynamicLib\\lib\\*/
+    HINSTANCE hGetProcIDDLL = LoadLibrary("DynamicLib.dll");
 
     if (!hGetProcIDDLL) {
         std::cout << "could not load the dynamic library" << std::endl;
